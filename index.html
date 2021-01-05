@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<title>Cloud Home Automation | BIT</title>
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+	<div>
+		<h1>Cloud Home Automation Project</h1>
+
+		<br>
+		<p style="color:#2c3e50;font-weight: bold;font-size: 18px;">ThingSpeak API Key :
+			<input type="password" id="ts-api-key" value="ZW3GKJ9AJ5MC4OAW" class="text"
+				placeholder="ThingSpeak API Key" />
+			<input type="checkbox" onclick="hideapikey()">Show API Key
+		</p>
+		<p style="color:#2c3e50;font-weight: bold;font-size: 18px;">ThingSpeak Channel ID :
+			<input type="password" id="ts-channel-id" value="1277375" class="text"
+				placeholder="ThingSpeak Channel ID" />
+			<input type="checkbox" onclick="hidechannelid()">Show Channel ID
+		</p>
+	</div>
+	<!-- From here our relay fields starts -->
+	<div class="relay-fields">
+		<!-- Relay 1 starts from here -->
+		<div class="field">
+			<h1>Relay 1</h1>
+			<button type="button" id="light-on1" class="buttonON">Power ON</button>
+			<button type="button" id="light-off1" class="buttonOFF">Power OFF</button> <br>
+			<br>
+			<img id="LightImage1" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState1">Updating
+						Please Wait....</span></p>
+			</div>
+		</div>
+		<!-- Relay 2 starts from here -->
+		<div class="field">
+			<h1>Relay 2</h1>
+			<button type="button" id="light-on2" class="buttonON">Power ON</button>
+			<button type="button" id="light-off2" class="buttonOFF">Power OFF</button> <br>
+			<br>
+			<img id="LightImage2" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState2">Updating
+						Please Wait....</span></p>
+			</div>
+		</div>
+		<!-- Relay 3 starts from here -->
+		<div class="field">
+			<h1>Relay 3</h1>
+			<button type="button" id="light-on3" class="buttonON">Power ON</button>
+			<button type="button" id="light-off3" class="buttonOFF">Power OFF</button> <br>
+			<br>
+			<img id="LightImage3" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState3">Updating
+						Please Wait....</span></p>
+			</div>
+		</div>
+		<!-- Relay 4 starts from here -->
+		<div class="field">
+			<h1>Relay 4</h1>
+			<button type="button" id="light-on4" class="buttonON">Power ON</button>
+			<button type="button" id="light-off4" class="buttonOFF">Power OFF</button> <br>
+			<br>
+			<img id="LightImage4" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState4">Updating
+						Please Wait....</span></p>
+			</div>
+		</div>
+		<!-- Relay 5 starts from here -->
+		<div class="field">
+			<h1>Relay 5</h1>
+			<button type="button" id="light-on5" class="buttonON">Power ON</button>
+			<button type="button" id="light-off5" class="buttonOFF">Power OFF</button> <br>
+			<br>
+			<img id="LightImage5" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState5">Updating
+						Please Wait....</span></p>
+			</div>
+		</div>
+		<!-- Relay 6 starts from here -->
+		<div class="field">
+			<h1>Relay 6</h1>
+			<button type="button" id="light-on6" class="buttonON">Power ON</button>
+			<button type="button" id="light-off6" class="buttonOFF">Power OFF</button> <br>
+			<br>
+			<img id="LightImage6" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState6">Updating
+						Please Wait....</span></p>
+			</div>
+		</div>
+		<!-- Relay 7 starts from here -->
+		<div class="field">
+			<h1>Relay 7</h1>
+			<button type="button" id="light-on7" class="buttonON">Power ON</button>
+			<button type="button" id="light-off7" class="buttonOFF">Power OFF</button> <br>
+			<br>
+			<img id="LightImage7" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState7">Updating
+						Please Wait....</span></p>
+			</div>
+		</div>
+		<!-- Relay 8 starts from here -->
+		<div class="field">
+			<h1>Relay 8</h1>
+			<button type="button" id="light-on8" class="buttonON">Power ON</button>
+			<button type="button" id="light-off8" class="buttonOFF">Power OFF</button> <br>
+			<br>
+			<img id="LightImage8" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState8">Updating
+						Please Wait....</span></p>
+			</div>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
