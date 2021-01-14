@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<title>Cloud Home Automation | BIT</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+		function on(hi) {
+			window.confirm("Turning ON Relay " + hi + " Please Wait 7 seconds.");
+		}
+
+		function off(hi) {
+			window.confirm("Turning OFF Relay " + hi + " Please Wait 7 seconds.");
+		}
+	</script>
+</head>
+
+<body>
+	<div class="header">
+		<div class="head">
+			<h1>Cloud Home Automation Project</h1>
+			<h2>Budhha Institute of Technology, GIDA Gorakhpur</h2>
+			<h3>Electronics and Communication Engineering Department</h3>
+		</div>
+		<div class="head">
+			<p style="color:#2c3e50;font-size: 18px;;"><span> ThingSpeak API Key : </span> <br>
+				<input type="password" id="ts-api-key" value="ZW3GKJ9AJ5MC4OAW" class="text"
+					placeholder="ThingSpeak API Key" />
+				<input type="checkbox" onclick="hideapikey()"><span> Show API Key </span>
+			</p>
+			<p style="color:#2c3e50;font-size: 18px;"><span> ThingSpeak Channel ID : </span><br>
+				<input type="password" id="ts-channel-id" value="1277375" class="text"
+					placeholder="ThingSpeak Channel ID" />
+				<input type="checkbox" onclick="hidechannelid()"><span> Show Channel ID </span> </p>
+		</div>
+
+	</div>
+	<!-- From here our relay fields starts -->
+	<div class="relay-fields">
+
+		<!-- Relay 1 starts from here -->
+		<div class="field">
+			<h1>Relay 1</h1>
+
+			<br>
+			<img id="LightImage1" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState1">Updating
+						Please Wait....</span></p>
+			</div>
+			<button type="button" id="light-on1" class="buttonON" onclick="on('1')">Power ON</button>
+			<button type="button" id="light-off1" class="buttonOFF" onclick="off('1')">Power OFF</button> <br>
+		</div>
+		<!-- Relay 2 starts from here -->
+		<div class="field">
+			<h1>Relay 2</h1>
+			<br>
+			<img id="LightImage2" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState2">Updating
+						Please Wait....</span></p>
+			</div>
+			<button type="button" id="light-on2" class="buttonON" onclick="on('2')">Power ON</button>
+			<button type="button" id="light-off2" class="buttonOFF" onclick="off('2')">Power OFF</button> <br>
+		</div>
+		<!-- Relay 3 starts from here -->
+		<div class="field">
+			<h1>Relay 3</h1>
+			<br>
+			<img id="LightImage3" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState3">Updating
+						Please Wait....</span></p>
+			</div>
+			<button type="button" id="light-on3" class="buttonON" onclick="on('3')">Power ON</button>
+			<button type="button" id="light-off3" class="buttonOFF" onclick="off('3')">Power OFF</button> <br>
+		</div>
+		<!-- Relay 4 starts from here -->
+		<div class="field">
+			<h1>Relay 4</h1>
+			<br>
+			<img id="LightImage4" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState4">Updating
+						Please Wait....</span></p>
+			</div>
+			<button type="button" id="light-on4" class="buttonON" onclick="on('4')">Power ON</button>
+			<button type="button" id="light-off4" class="buttonOFF" onclick="off('4')">Power OFF</button> <br>
+		</div>
+		<!-- Relay 5 starts from here -->
+		<div class="field">
+			<h1>Relay 5</h1>
+			<br>
+			<img id="LightImage5" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState5">Updating
+						Please Wait....</span></p>
+			</div>
+			<button type="button" id="light-on5" class="buttonON" onclick="on('5')">Power ON</button>
+			<button type="button" id="light-off5" class="buttonOFF" onclick="off('5')">Power OFF</button> <br>
+		</div>
+		<!-- Relay 6 starts from here -->
+		<div class="field">
+			<h1>Relay 6</h1>
+			<br>
+			<img id="LightImage6" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState6">Updating
+						Please Wait....</span></p>
+			</div>
+			<button type="button" id="light-on6" class="buttonON" onclick="on('6')">Power ON</button>
+			<button type="button" id="light-off6" class="buttonOFF" onclick="off('6')">Power OFF</button> <br>
+		</div>
+		<!-- Relay 7 starts from here -->
+		<div class="field">
+			<h1>Relay 7</h1>
+			<br>
+			<img id="LightImage7" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState7">Updating
+						Please Wait....</span></p>
+			</div>
+			<button type="button" id="light-on7" class="buttonON" onclick="on('7')">Power ON</button>
+			<button type="button" id="light-off7" class="buttonOFF" onclick="off('7')">Power OFF</button> <br>
+		</div>
+		<!-- Relay 8 starts from here -->
+		<div class="field">
+			<h1>Relay 8</h1>
+			<br>
+			<img id="LightImage8" width="30%" src="timer.gif">
+			<div>
+				<p style="color:#2c3e50;font-weight: bold;font-size: 24px;">Power Status is <span
+						id="LIGHTState8">Updating
+						Please Wait....</span></p>
+			</div>
+			<button type="button" id="light-on8" class="buttonON" onclick="on('8')">Power ON</button>
+			<button type="button" id="light-off8" class="buttonOFF" onclick="off('8')">Power OFF</button> <br>
+		</div>
+	</div>
+	<footer>
+		<div class="team" style="display: inline-block;">
+			<h2>This project is the build by <strong>Cloud Home Automation Team</strong>.</h2>
+			<div class="photo"> <img src="p.jpg" width="70px" alt="photo">
+				<p>Purnachandra P. N.</p>
+			</div>
+			<div class="photo"> <img src="sam.jpg" width="70px" alt="photo">
+				<p>Sameer Singh</p>
+			</div>
+			<div class="photo"> <img src="ram.jpg" width="70px" alt="photo">
+				<p>Ram Milan Chauhan</p>
+			</div>
+			<div class="photo"> <img src="san.jpg" width="70px" alt="photo">
+				<p>Sandeep Yadav</p>
+			</div>
+		</div>
+		<div class="copy" style="display: inline-block;">
+			<img src="p.jpg" width="100px" alt="purna">
+			<p>This Website is created by <a href="https://purnchndr.github.io/" target="_blank"> Purnachandra
+				</a>.</p>
+		</div>
+	</footer>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
